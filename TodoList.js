@@ -21,14 +21,15 @@ function TodoList() {
       description: newTodoDescription,
       completed: false,
     };
-
     const updatedTodos = [...todos, newTodo];
     setTodos(updatedTodos);
+    // Add element to array: use spread operator!
   }
 
   function deleteTodo(id) {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
+    // Remove element to array: use filter!
   }
 
   function updateTodo(id, completed) {
@@ -48,6 +49,7 @@ function TodoList() {
       }
     });
     setTodos(updatedTodos);
+    // Update element in array: use map!
   }
 
   //   console.log(todos)
